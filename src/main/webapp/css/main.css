@@ -1,0 +1,68 @@
+* {
+	margin:0;
+	padding:0;
+	border:0;
+	font-family:"Î¢ÈíÑÅºÚ",simsun,sans-serif;
+}
+body {
+	font: 12px/20px "Î¢ÈíÑÅºÚ", "ËÎÌå", Arial, sans-serif, Verdana, Tahoma;
+	padding: 0;
+	margin: 0;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+.cs-north {
+	height:60px;
+	background:#B3DFDA;
+}
+.cs-north-bg {
+		width: 100%;
+		height: 100%;
+	overflow: hidden;
+	background: url(../imagelib/header_bg.png) repeat-x;
+}
+.cs-north-bg span {
+	float: right;
+	display: block;
+	font-size: 14px;
+	width: 72px;
+	height: 60px;
+	line-height: 60px;
+	color:#000000;
+	text-align: right;
+	margin-right: 25px;
+	background: url(../imagelib/logout.png) no-repeat 15px 50%;
+	text-decoration:none;
+}
+.cs-west {
+	width:220px;
+	padding:0px;
+	border-left:1px solid #99BBE8;
+}
+.cs-south {
+	height:25px;
+	background:url('/publicVersion/csslib/jQueryEasyui/themes/gray/images/panel_title.gif') repeat-x;
+	padding:0px;
+	text-align:center;
+}
+.cs-navi-tab {
+	border-bottom: 1px solid #e6e8ea;
+	width: 180px;
+	padding: 5px 0px 5px 10px;
+	color: #005fb7;
+	display: block;
+	font-size: 12px;
+}
+.cs-tab-menu {
+	width:120px;
+}

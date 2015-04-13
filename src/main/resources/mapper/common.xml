@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="common">
+	<parameterMap type="map" id="sequenceMap">
+		<parameter property="name" jdbcType="VARCHAR" javaType="java.lang.String"
+			mode="IN" />
+		<parameter property="nextval" jdbcType="BIGINT" javaType="java.math.BigInteger" mode="OUT" />
+	</parameterMap>
+	<select id="queryNextVal" parameterMap="sequenceMap" statementType="CALLABLE">
+		{call p_nextval(?,?)}
+	</select>
+</mapper>
