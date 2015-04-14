@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="authority">
+	<select id="queryUserInfo" parameterType="java.lang.String" resultType="com.mp.apms.authority.bean.User">
+		SELECT t.id,t.loginname,t.pwd,t.name,t.email,t.phonenum,t.linkman,t.qq,t.status,t.roleid,t.isroot
+		  FROM t_user t
+		 where t.loginname=#{loginName}
+	</select>
+	<select id="queryRoleById" parameterType="java.lang.String" resultType="com.mp.apms.authority.bean.Role">
+		SELECT t.id,t.name,t.desc,t.menus
+		  FROM t_role t
+		 where t.id=#{id}
+	</select>
+	<select id="queryMenus" parameterType="java.lang.String" resultType="com.mp.apms.authority.bean.Menu">
+		SELECT t.id,t.name,t.url,t.order,t.parentid
+		  FROM t_menu t
+		 where 1=1
+		<if test="ids != null">
+			and t.id in(${ids})
+		</if>
+	</select>
+</mapper>
