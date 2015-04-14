@@ -5,6 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"> 
 	<head>
+		<meta charset="UTF-8">
 		<title>后台管理系统</title>
 		<jsp:include flush="true" page="/jsp/common/script_include_easyui.jsp"></jsp:include>
 		<link href="${pageContext.request.contextPath}/css/main.css" rel="stylesheet" type="text/css" />
@@ -180,67 +181,6 @@
 	</div>
 	<div region="west" border="true" split="true" title="导航窗口" class="cs-west color-rest">
 		<div class="easyui-accordion" border="false">
-			<%-- <div title="应用管理" selected="false">
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/app/page" class="cs-navi-tab">原生应用管理</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/web/page" class="cs-navi-tab">Web应用管理</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/appservice/page" class="cs-navi-tab">服务号管理</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/version/page" class="cs-navi-tab">历史版本</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/appType/page" class="cs-navi-tab">业务类型管理</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/scene/page" class="cs-navi-tab">场景管理</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/waitertemplate/page" class="cs-navi-tab">模板管理</a></p>
-		   </div>
-			<div title="原生应用接入管理" selected="false">
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/console/app/mobile/page?flowState=0" class="cs-navi-tab">待审核原生应用管理</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/console/app/mobile/page?flowState=1" class="cs-navi-tab">审核已通过原生应用管理</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/console/app/mobile/page?flowState=2" class="cs-navi-tab">审核未通过原生应用管理</a></p>
-			</div>
-			<div title="开发者管理中心" selected="false">
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/developer/page" class="cs-navi-tab">开发者注册管理</a></p>
-			</div>
-			<div title="策略管理" selected="false">
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/appRule/page" class="cs-navi-tab">应用策略管理</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/jsp/handheld/strategy/loginStrategylist.jsp" class="cs-navi-tab">登陆策略管理</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/jsp/handheld/strategy/loginStrategyAuthlist.jsp" class="cs-navi-tab">鉴权服务管理</a></p>
-				<!-- <a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/appAuth/page" class="cs-navi-tab">应用鉴权服务</a></p> -->
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/userinfo/page" class="cs-navi-tab">用户信息服务</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/appAuthed/page" class="cs-navi-tab">已授权应用列表服务</a></p>
-			</div>
-			<div title="API授权" selected="false">
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/jsp/handheld/apiempower/apiempower.jsp" class="cs-navi-tab">API授权</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/jsp/handheld/apiempower/apiempowerlog.jsp" class="cs-navi-tab">API历史记录</a></p>
-			</div>
-			<div title="讨论组管理" selected="false">
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/discussgroup/page" class="cs-navi-tab">讨论组管理</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/discusstopic/page" class="cs-navi-tab">讨论组主题管理</a></p>
-			</div>
-			<div title="查询统计" selected="false">
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/useLog/pageuselog" class="cs-navi-tab">使用统计</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/downloadLog/pagedown" class="cs-navi-tab">下载统计</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/useLog/pagequerySta" class="cs-navi-tab">查询统计</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/inlog/page" class="cs-navi-tab">登录统计</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/usernum/page" class="cs-navi-tab">在线用户数</a></p>
-			</div>
-			<div title="日志管理" selected="false">
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/inlog/pagemsg" class="cs-navi-tab">登录日志</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/useLog/page" class="cs-navi-tab">使用日志</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/downloadLog/page" class="cs-navi-tab">下载日志</a></p>
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/jsp/handheld/log/errorLoglist.jsp" class="cs-navi-tab">错误日志</a></p>
-			</div>
-			<div title="公告管理" selected="false">
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/announcementList/page" class="cs-navi-tab">公告管理</a></p>
-			</div>
-			<div title="横幅管理" selected="false">
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/platformpage/page" class="cs-navi-tab">平台宣传页管理</a></p>
-			</div>
-			<div title="版本更新" selected="false">
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/jsp/handheld/updateplatform/updateplatform.jsp" class="cs-navi-tab">版本更新</a></p>
-			</div>
-			<div title="建议管理" selected="false">
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/addvice/page" class="cs-navi-tab">建议管理</a></p>
-			</div>
-			<div title="厂商管理" selected="false">
-				<a href="javascript:void(0);" src="${pageContext.request.contextPath}/rest/appstore/page" class="cs-navi-tab">厂商管理</a></p>
-			</div> --%>
 			${menuString}
 		</div>
 	</div>

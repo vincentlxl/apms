@@ -1,6 +1,6 @@
-package com.mp.apms.bean;
+package com.mp.apms.authority.bean;
 
-public class Menu
+public class Menu implements Comparable<Menu>
 {
     private String id;
     
@@ -60,5 +60,20 @@ public class Menu
     public void setOrder(int order)
     {
         this.order = order;
+    }
+    
+    @Override
+    public int compareTo(Menu menu)
+    {
+        if (this.order > menu.getOrder())
+        {
+            return 1;
+        }
+        else if (this.order < menu.getOrder())
+        {
+            return -1;
+        }
+        
+        return 0;
     }
 }

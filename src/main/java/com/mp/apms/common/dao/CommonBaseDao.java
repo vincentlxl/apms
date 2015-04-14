@@ -31,9 +31,9 @@ public class CommonBaseDao extends SqlSessionDaoSupport
         return (E)getSqlSession().selectOne(statement);
     }
     
-    public <E> List<?> selectList(String statement)
+    public <E,T> List<T> selectList(String statement)
     {
-        return (List<?>) getSqlSession().selectList(statement);
+        return (List<T>) getSqlSession().selectList(statement);
     }
     
     public <E> int insert(String statement, E parameter)
