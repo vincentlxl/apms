@@ -187,7 +187,7 @@
 	<div id="mainPanle" region="center" border="true" border="false">
 		 <div id="tabs" class="easyui-tabs"  fit="true" border="false" >
                 <div title="主页" >
-                	<iframe scrolling="yes" frameborder="0"  src="${pageContext.request.contextPath}/rest/useLog/pagequerySta" style="width:100%;height:100%;"></iframe>
+                	<iframe scrolling="yes" frameborder="0"  src="" style="width:100%;height:100%;"></iframe>
 				</div>
         </div>
 	</div>
